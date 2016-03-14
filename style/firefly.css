@@ -1,0 +1,510 @@
+body {
+  font-family: 'Tempus Sans ITC';
+  color: #484848;
+  background-attachment: fixed;
+  background-color: #000;
+  background-image: url([[pix:theme|flower-bg]]);
+  background-position: left 40px;
+  background-repeat: no-repeat;
+}
+
+body.dir-rtl {
+  background-image: url([[pix:theme|rtl-flower-bg]]);
+  background-position: right 40px;
+}
+
+.breadcrumb li,
+.nav-header {
+  text-shadow: none;
+}
+
+.breadcrumb-button a .fa {
+  margin: 0;
+}
+
+.block .header {
+  padding: 8px 0;
+  background-image: url([[pix:theme|flower-fade]]);
+}
+
+.block {
+  padding: 0;
+  margin: 0 0 10px 10px;
+  background-image: url([[pix:theme|flower-wash]]);
+  border: 0 none;
+}
+
+#region-main.span9,
+#region-main.span12 {
+  padding: 0;
+  background-color: #850f41;
+  background-image: url([[pix:theme|flower-rose]]);
+}
+
+#region-main.span9,
+#region-main.span12,
+.block {
+  background-attachment: fixed;
+  background-position: 0 40px;
+  background-repeat: no-repeat;
+}
+
+#region-main.span9 .header,
+#region-main.span12 .header,
+.block .header {
+  background-attachment: fixed;
+  background-position: 0 40px;
+  background-repeat: no-repeat;
+}
+
+#region-main > .container-fluid {
+  background-color: transparent;
+}
+
+#block-region-side-pre,
+.block {
+  background-color: transparent;
+}
+
+#block-region-side-pre .header,
+.block .header {
+  background-color: transparent;
+}
+
+.dir-rtl .block .header {
+  background-image: url([[pix:theme|rtl-flower-fade]]);
+}
+
+.dir-rtl .block {
+  margin: 0 10px 10px 0;
+  background-image: url([[pix:theme|rtl-flower-wash]]);
+}
+
+.dir-rtl #region-main.span9,
+.dir-rtl #region-main.span12 {
+  background-image: url([[pix:theme|rtl-flower-rose]]);
+}
+
+.dir-rtl #region-main.span9,
+.dir-rtl #region-main.span12,
+.dir-rtl .block {
+  background-position: right 40px;
+}
+
+.dir-rtl #region-main.span9 .header,
+.dir-rtl #region-main.span12 .header,
+.dir-rtl .block .header {
+  background-position: right 40px;
+}
+
+/* COMMAND ICONS
+-----------------------*/
+
+.editing .block a.menu-action i.fa {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  font-size: 150%;
+}
+
+img.iconsmall,
+.block.block_with_controls div.header div.commands a img,
+.block-control-actions span.moodle-core-dragdrop-draghandle img,
+.course-content ul.topics li.section .right img,
+.course-content ul.topics li.section .left img,
+.editing .block a.menu-action i.fa {
+  width: 15px;
+  height: 15px;
+  padding: 1px;
+  margin: 2px;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.block .header .commands a.menu-action i.fa {
+  text-align: center;
+}
+
+li.divider {
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  background: none;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px dashed #e5e5e5;
+}
+
+/* FRONTPAGE COURSE COMBO
+-------------------------*/
+
+.coursebox.info .coursename {
+  float: left;
+}
+
+.coursebox.info .coursename a {
+  background-position: left;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Colonna MT', Broadway;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1;
+  color: #ddd;
+}
+
+h1 {
+  font-size: 210%;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 130%;
+}
+
+h4 {
+  font-size: 120%;
+}
+
+body.pagelayout-redirect {
+  background-position: left top;
+}
+
+body.dir-rtl.pagelayout-redirect {
+  background-position: right top;
+}
+
+.alert {
+  width: 50%;
+  margin: 2em auto;
+}
+
+.path-admin .buttons,
+.form-buttons {
+  padding: 0;
+  text-align: center;
+  background: none;
+  border: 0 none;
+}
+
+/*
+Courses and categories lists
+----------------------------*/
+
+.coursebox .content .summary,
+.coursebox .content .coursecat {
+  float: left;
+  width: 100%;
+}
+
+.coursebox > .info > .coursename {
+  width: auto;
+}
+
+.coursebox .content .teachers,
+.coursebox .content .courseimage,
+.coursebox .content .coursefile {
+  width: 100%;
+}
+
+#page-course-index-category .generalbox.info {
+  padding: 0 5px;
+  margin: 1em 0;
+}
+
+.coursebox > .info > .coursename a {
+  background-position: left 2px;
+}
+
+.coursebox > .info > .coursename {
+  float: left;
+}
+
+.courses .coursebox,
+.courses .coursebox:hover,
+.course_category_tree .courses > .paging.paging-morelink,
+.course_category_tree .courses > .paging.paging-morelink:hover {
+  background-color: #eee;
+}
+
+.courses .coursebox.collapsed {
+  padding: 0;
+  margin: 3px 0;
+  border: 0;
+}
+
+.forumpost .picture img.userpicture {
+  margin-right: 10px;
+  margin-left: 3px;
+  border-color: #850f41;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50% 50% 5%;
+}
+
+.usermenu .avatar,
+.usermenu .avatars img {
+  display: block;
+  border-color: #850f41;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50% 50% 5% 50%;
+}
+
+.dir-rtl .usermenu .avatar,
+.dir-rtl .usermenu .avatars img {
+  display: block;
+  border-color: #850f41;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50% 50% 50% 5%;
+}
+
+.section.main {
+  color: #454545;
+  background-color: #fff;
+}
+
+h3.sectionname,
+.header.c0,
+.header.c1,
+.header.c2,
+.header.c3,
+.header.c4,
+.header.c5,
+.header.c6 {
+  color: #850f41;
+}
+
+.path-grade-report-grader h1 {
+  font-size: 175%;
+}
+
+.user-enroller-panel .uep-search-results .users tbody tr:hover > th,
+.user-enroller-panel .uep-search-results .users tbody tr:hover > td,
+.user-enroller-panel .uep-search-results .cohorts tbody tr:hover > th,
+.user-enroller-panel .uep-search-results .cohorts tbody tr:hover > td,
+.forumheaderlist tbody tr:hover > th,
+.forumheaderlist tbody tr:hover > td,
+.generaltable tbody tr:hover > th,
+.generaltable tbody tr:hover > td,
+.category_subcategories tbody tr:hover > th,
+.category_subcategories tbody tr:hover > td,
+table#modules tbody tr:hover > th,
+table#modules tbody tr:hover > td,
+table#permissions tbody tr:hover > td,
+table#permissions tbody tr:hover > th,
+table.grading-report tbody tr:hover > th,
+table.grading-report tbody tr:hover > td,
+table.flexible tbody tr:hover > th,
+table.flexible tbody tr:hover > td {
+  background-color: transparent;
+}
+
+#region-main .frontpage-category-names,
+#region-main .sitetopic ul.section,
+#region-main .course_category_tree {
+  color: #484848;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+#notice {
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+#notice.generalbox {
+  padding: 20px 20px 0;
+  border-radius: 3px;
+}
+
+.pagelayout-maintenance .generalbox,
+.pagelayout-maintenance #plugins-check-info.somehighlighted a {
+  color: #ddd;
+}
+
+.pagelayout-maintenance #plugins-check.generaltable {
+  color: #484848;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+#page-login-index #page-header h1 {
+  padding: 0 20px;
+  font-size: 300%;
+}
+
+#page-login-index .loginpanel h2,
+#page-login-index .signuppanel h2 {
+  font-size: 230%;
+}
+
+#page-login-index .loginpanel {
+  color: #4c4c4c;
+  background-attachment: fixed;
+  background-color: #d9d9d9;
+  background-image: url([[pix:theme|flower-wash]]);
+  background-position: 0 40px;
+  background-repeat: no-repeat;
+}
+
+#page-login-index .loginpanel h2 {
+  color: #850f41;
+}
+
+#page-login-index .signuppanel {
+  color: #d9d9d9;
+}
+
+#page-login-index .signuppanel h2 {
+  color: #d9d9d9;
+}
+
+/*
+Docking Module
+---------------*/
+
+#dock .dockeditem {
+  background-color: #850f41;
+}
+
+#dock .dockedtitle {
+  color: #d9d9d9;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#dock .dockedtitle h2 {
+  padding: 10px 3px;
+  margin: 0;
+  color: #d9d9d9;
+}
+
+#dock.activeitem {
+  background-color: #d9d9d9;
+  border-radius: 3px;
+}
+
+#dock.activeitem h2 {
+  color: #4c4c4c;
+}
+
+#dock .controls {
+  bottom: auto;
+  background-color: #4c4c4c;
+  border-radius: 3px;
+}
+
+#dock .controls img {
+  margin: 0;
+}
+
+/*
+Docked Item Panel
+-----------------------*/
+
+.dockeditempanel_hd {
+  background-attachment: fixed;
+  background-color: #4c4c4c;
+  background-image: url([[pix:theme|flower-fade]]);
+  background-position: 0 40px;
+  background-repeat: no-repeat;
+}
+
+.dockeditempanel_hd h2 {
+  color: #d9d9d9;
+}
+
+#dockeditempanel .dockeditempanel_content {
+  width: auto;
+  min-width: 250px;
+  box-shadow: none;
+}
+
+#dockeditempanel .dockeditempanel_bd {
+  width: auto;
+  overflow: auto;
+}
+
+#dockeditempanel .dockeditempanel_bd .block_navigation .block_tree li {
+  overflow: visible;
+}
+
+#page-admin-purgecaches #notice.generalbox {
+  background-color: #fff;
+}
+
+#page-admin-purgecaches #region-main .container-fluid {
+  padding-bottom: 20px;
+}
+
+#page-footer {
+  border-top: 0 none;
+}
+
+ul.section {
+  padding-top: 5px;
+}
+
+.coursebox > .info > .coursename a {
+  background-image: url([[pix:theme|course]]);
+  background-position: left top;
+}
+
+.collapsible-actions .collapseexpand {
+  padding: 10px 20px;
+}
+
+.initialbar {
+  padding: 10px 10px 5px;
+  background-color: #fff;
+}
+
+.initialbar.firstinitial {
+  border-radius: 4px 4px 0 0;
+}
+
+.initialbar.lastinitial {
+  border-radius: 0 0 4px 4px;
+}
+
+.initialbar label {
+  font-weight: bold;
+  color: #850f41;
+}
+
+table#user-grades th a {
+  font-weight: bold;
+}
+
+.jsenabled .collapsible-actions {
+  display: block;
+  padding: 10px 0;
+}
+
+.collapsible-actions .collapseexpand {
+  padding: 0 20px;
+}
+
+#site-news-forum .singlebutton div:firstchild {
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 5px;
+  margin-left: -5px;
+}
+
+.dir-rtl .fa {
+  margin-right: 0;
+  margin-left: 0.3em;
+}

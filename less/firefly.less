@@ -1,0 +1,482 @@
+/** Firefly LESS file **/
+
+@rose: #850f41;
+@fade: #4c4c4c;
+@wash: #d9d9d9;
+
+@navbarLinkColor: @rose;
+@navbarLinkColorHover: lighten(@navbarLinkColor, 25%);
+
+@formActionsBackground: @wellBackground;
+
+@paginationActiveBackground: @wellBackground;
+
+@hrBorder: darken(@wellBackground, 5%);
+
+@bodyColor: @fade;
+
+@fireflyThemeColor: @rose;
+@fireflyThemeColorHover: lighten(@fireflyThemeColor, 25%);
+
+
+body {
+    background-color: @black;
+    background-image:  url([[pix:theme|flower-bg]]);
+    background-position: left 40px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Tempus Sans ITC', sans-serif;
+    color: @bodyColor;
+}
+body.dir-rtl {
+        background-image:  url([[pix:theme|rtl-flower-bg]]);
+        background-position: right 40px;
+}
+// Remove unwanted text shadow, this can look odd with random colours.
+.breadcrumb li,
+.nav-header {
+    text-shadow: none;
+}
+.breadcrumb-button a .fa {
+    margin: 0;
+}
+
+.block .header {
+    background-image: url([[pix:theme|flower-fade]]);
+    padding: 8px 0;
+}
+.block {
+    background-image: url([[pix:theme|flower-wash]]);
+    border: 0 none;
+    margin: 0 0 10px 10px;
+    padding: 0;
+}
+#region-main.span9,
+#region-main.span12 {
+    background-color: @fireflyThemeColor;
+    background-image: url([[pix:theme|flower-rose]]);
+    padding: 0;
+    color: @bodyColor;
+}
+#region-main.span9,
+#region-main.span12,
+.block {
+    background-position: 0 40px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .header {
+        background-position: 0 40px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
+#region-main {
+    > .container-fluid {
+        background-color: transparent;
+    }
+}
+#block-region-side-pre,
+.block {
+    background-color: transparent;
+    .header {
+        background-color: transparent;
+    }
+}
+.dir-rtl .block .header {
+    background-image: url([[pix:theme|rtl-flower-fade]]);
+}
+.dir-rtl .block {
+    background-image: url([[pix:theme|rtl-flower-wash]]);
+    margin: 0 10px 10px 0;
+}
+.dir-rtl #region-main.span9,
+.dir-rtl #region-main.span12 {
+    background-image: url([[pix:theme|rtl-flower-rose]]);
+}
+.dir-rtl #region-main.span9,
+.dir-rtl #region-main.span12,
+.dir-rtl .block {
+    background-position: right 40px;
+    .header {
+        background-position: right 40px;
+    }
+}
+
+/* COMMAND ICONS
+-----------------------*/
+.editing .block a.menu-action i.fa {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    font-size: 150%;
+}
+img.iconsmall,
+.block.block_with_controls div.header div.commands a img,
+.block-control-actions span.moodle-core-dragdrop-draghandle img,
+.course-content ul.topics li.section .right img,
+.course-content ul.topics li.section .left img,
+.editing .block a.menu-action i.fa {
+    height: 15px;
+    margin: 2px;
+    width: 15px;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    padding: 1px;
+    border-radius: 5px;
+}
+.block .header .commands a.menu-action i.fa {
+    text-align: center;
+}
+li.divider {
+    border-bottom: 1px dashed #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    background: none;
+}
+/* FRONTPAGE COURSE COMBO
+-------------------------*/
+.coursebox > {
+    &.info > {
+        .coursename {
+            float: left;
+            a {
+                background-position: left;
+            }
+        }
+    }
+}
+h1, h2, h3, h4 {
+    font-family: 'Colonna MT', Broadway;
+    line-height: 1;
+    font-style: normal;
+    color: #ddd;
+    font-size: 13px;
+}
+h1 {
+    font-size: 210%;
+}
+h2 {
+    font-size: 150%;
+}
+h3 {
+    font-size: 130%;
+}
+h4 {
+    font-size: 120%;
+}
+body.pagelayout-redirect {
+    background-position: left top;
+}
+body.dir-rtl.pagelayout-redirect {
+    background-position: right top;
+}
+.alert {
+    width: 50%;
+    margin: 2em auto;
+}
+.path-admin .buttons,
+.form-buttons {
+    background: none;
+    border: 0 none;
+    padding: 0;
+    text-align: center;
+}
+/*
+Courses and categories lists
+----------------------------*/
+.coursebox .content .summary,
+.coursebox .content .coursecat {
+    width: 100%;
+    float: left;
+}
+.coursebox > .info > .coursename {
+    width: auto;
+}
+.coursebox .content .teachers,
+.coursebox .content .courseimage,
+.coursebox .content .coursefile {
+    width: 100%;
+}
+#page-course-index-category .generalbox.info {
+    margin: 1em 0;
+    padding: 0 5px;
+}
+.coursebox > .info > .coursename a {
+    background-position: left 2px;
+}
+.coursebox > .info > .coursename {
+    float: left;
+}
+.courses .coursebox,
+.courses .coursebox:hover,
+.course_category_tree .courses > .paging.paging-morelink,
+.course_category_tree .courses > .paging.paging-morelink:hover {
+    background-color: #eee;
+}
+.courses .coursebox.collapsed {
+    border: 0;
+    margin: 3px 0;
+    padding: 0;
+}
+
+.forumpost .picture img.userpicture {
+    border-radius: 50% 50% 5%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @rose;
+    margin-left: 3px;
+    margin-right: 10px;
+}
+
+.usermenu .avatar,
+.usermenu .avatars img {
+    border-radius: 50% 50% 5% 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @rose;
+    display: block;
+}
+.dir-rtl .usermenu .avatar,
+.dir-rtl .usermenu .avatars img {
+    border-radius: 50% 50% 50% 5%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @rose;
+    display: block;
+}
+.section.main {
+    background-color: #fff;
+    color: #454545;
+}
+h3.sectionname,
+.header.c0,
+.header.c1, .header.c2,
+.header.c3, .header.c4,
+.header.c5, .header.c6 {
+    color: @rose;
+}
+.path-grade-report-grader h1 {
+    font-size: 175%;
+}
+// Reversing some crazy hover functions.
+.user-enroller-panel .uep-search-results .users tbody tr:hover > th,
+.user-enroller-panel .uep-search-results .users tbody tr:hover > td,
+
+.user-enroller-panel .uep-search-results .cohorts tbody tr:hover > th,
+.user-enroller-panel .uep-search-results .cohorts tbody tr:hover > td,
+
+.forumheaderlist tbody tr:hover > th,
+.forumheaderlist tbody tr:hover > td,
+
+.generaltable tbody tr:hover > th,
+.generaltable tbody tr:hover > td,
+
+.category_subcategories tbody tr:hover > th,
+.category_subcategories tbody tr:hover > td,
+
+table#modules tbody tr:hover > th,
+table#modules tbody tr:hover > td,
+
+table#permissions tbody tr:hover > td,
+table#permissions tbody tr:hover > th,
+
+table.grading-report tbody tr:hover > th,
+table.grading-report tbody tr:hover > td,
+
+table.flexible tbody tr:hover > th,
+table.flexible tbody tr:hover > td {
+    background-color: transparent;
+}
+#region-main {
+    .frontpage-category-names,
+    .sitetopic ul.section,
+    .course_category_tree {
+        background-color: #eee;
+        color: #484848;
+        border-radius: 3px;
+    }
+}
+
+#notice {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+#notice.generalbox {
+    padding: 20px 20px 0;
+    border-radius: 3px;
+}
+
+.pagelayout-maintenance {
+    .generalbox,
+    #plugins-check-info.somehighlighted a {
+        color: #ddd;
+    }
+    #plugins-check {
+        &.generaltable {
+            background-color: #eee;
+            color: #484848;
+            border-radius: 3px;
+        }
+    }
+}
+#page-login-index {
+    #page-header {
+        h1 {
+            padding: 0 20px;
+            font-size: 300%;
+        }
+    }
+    .loginpanel,
+    .signuppanel {
+        h2 {
+            font-size: 230%;
+        }
+    }
+    .loginpanel {
+        h2 {
+            color: @rose;
+        }
+        background-color: @wash;
+        background-image: url([[pix:theme|flower-wash]]);
+        background-position: 0 40px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: @fade;
+    }
+    .signuppanel {
+        h2 {
+            color: @wash;
+        }
+        color: @wash;
+    }
+}
+
+/*
+Docking Module
+---------------*/
+#dock {
+    .dockeditem {
+        background-color: @rose;
+    }
+    .dockedtitle {
+        border-radius: 3px;
+        color: @wash;
+        cursor: pointer;
+        text-align: center;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        h2 {
+            margin: 0;
+            padding: 10px 3px;
+            color: @wash;
+        }
+    }
+    &.activeitem {
+        background-color: @wash;
+        border-radius: 3px;
+        h2 {
+            color: @fade;
+        }
+    }
+    .controls {
+        bottom: auto;
+        background-color: @fade;
+        border-radius: 3px;
+            img {
+            margin: 0;
+        }
+    }
+}
+
+/*
+Docked Item Panel
+-----------------------*/
+.dockeditempanel_hd {
+    h2 {
+        color: @wash;
+    }
+    background-color: @fade;
+    background-image: url([[pix:theme|flower-fade]]);
+    background-position: 0 40px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#dockeditempanel {
+    .dockeditempanel_content {
+        box-shadow: none;
+        width: auto;
+        min-width: 250px;
+    }
+    .dockeditempanel_bd {
+        overflow: auto;
+        width: auto; /* adds scroll to dock panel */
+        .block_navigation {
+            .block_tree li {
+                overflow:visible;
+            }
+        }
+    }
+}
+#page-admin-purgecaches {
+    #notice.generalbox {
+        background-color: #fff;
+    }
+    #region-main {
+        .container-fluid {
+            padding-bottom: 20px;
+        }
+    }
+}
+#page-footer {
+    border-top: 0 none;
+}
+ul.section {
+    padding-top: 5px;
+}
+.coursebox > .info > .coursename a {
+    background-image:  url([[pix:theme|course]]);
+    background-position: left top;
+}
+.collapsible-actions .collapseexpand {
+    padding: 10px 20px;
+}
+.initialbar {
+    background-color: #fff;
+    padding: 10px 10px 5px;
+    &.firstinitial {
+        border-radius: 4px 4px 0 0;
+    }
+    &.lastinitial {
+        border-radius: 0 0 4px 4px;
+    }
+    label {
+        color: @rose;
+        font-weight: bold;
+    }
+}
+table#user-grades th a {
+    font-weight: bold;
+}
+.jsenabled .collapsible-actions {
+    display: block;
+    padding: 10px 0;
+}
+.collapsible-actions .collapseexpand {
+    padding: 0 20px;
+}
+#site-news-forum {
+    .singlebutton {
+        div:firstchild {
+            display: inline-block;
+            margin-bottom: 5px;
+            margin-left: -5px;
+            margin-right: 0;
+        }
+    }
+}
+.dir-rtl .fa {
+    margin-left: 0.3em;
+    margin-right: 0;
+}
