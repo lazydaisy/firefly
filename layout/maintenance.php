@@ -18,12 +18,9 @@
  * The two column layout.
  *
  * @package   theme_firefly
- * @copyright 2013 Moodle, moodle.org
+ * @copyright 2016 byLazyDaisy.uk
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-// Inherit HTML for Firefly settings from parent theme.
-$html = theme_clean_get_html_for_settings($OUTPUT, $PAGE);
 
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>

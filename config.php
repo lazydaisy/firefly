@@ -18,12 +18,12 @@
  * Theme Firefly configuration file.
  *
  * @package    theme_firefly
- * @copyright  2014 Mary Evans (bylazydaisy.co.uk)
+ * @copyright 2016 byLazyDaisy.uk
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $THEME->name = 'firefly';
-$THEME->parents = array('clean', 'bootstrapbase');
+$THEME->parents = array('bootstrapbase');
 
 $THEME->doctype = 'html5';
 $THEME->sheets = array('custom', 'firefly-fonts');
@@ -122,7 +122,7 @@ $THEME->layouts = array(
     // This must not have any blocks, links, or API calls that would lead to database or cache interaction.
     // Please be extremely careful if you are modifying this layout.
     'maintenance' => array(
-        'file' => 'default.php',
+        'file' => 'maintenance.php',
         'regions' => array(),
         'options' => array('nonavbar' => true)
     ),

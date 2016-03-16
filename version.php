@@ -18,16 +18,15 @@
  * Theme Firefly configuration file.
  *
  * @package    theme_firefly
- * @copyright  2014 Mary Evans (bylazydaisy.co.uk)
+ * @copyright 2016 byLazyDaisy.uk
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2014051200;
-$plugin->requires  = 2014050800;
+$plugin->version   = 2016031500;
+$plugin->requires  = 2016030400;
 $plugin->component = 'theme_firefly';
 $plugin->dependencies = array(
-    'theme_bootstrapbase'  => 2014110400,
-    'theme_clean' => 2014110400,
+    'theme_bootstrapbase'  => 2015111600,
 );

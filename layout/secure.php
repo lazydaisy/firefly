@@ -25,15 +25,6 @@
 // Inherit HTML for Firefly settings from parent theme.
 $html = theme_firefly_get_html_for_settings($OUTPUT, $PAGE);
 
-// Set default left_to_right (LTR) layout.
-$regionmain = 'span9 pull-right';
-$sidepre = 'span3 desktop-first-column';
-// Define right_to_left (RTL) layout.
-if (right_to_left()) {
-    $regionmain = 'span9';
-    $sidepre = 'span3 pull-right';
-}
-
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
 <head>
@@ -50,7 +41,7 @@ echo $OUTPUT->doctype() ?>
 <header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?> moodle-has-zindex">
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
-            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo
+            <a href="#" class="brand"><?php echo
                 format_string($SITE->shortname, true, array('context' => context_course::instance(SITEID)));
                 ?></a>
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -71,20 +62,25 @@ echo $OUTPUT->doctype() ?>
 
 <div id="page" class="container-fluid">
     <div id="page-content" class="row-fluid">
-        <div id="region-main" class="<?php echo $regionmain; ?>">
+        <div id="region-main" class="span12">
         <div class="container-fluid">
-        <?php {
-            echo $OUTPUT->full_header();
-            echo $OUTPUT->course_content_header();
-            echo '<div class="region-content">';
-            echo $OUTPUT->main_content();
-            echo '</div>';
-            echo $OUTPUT->course_content_footer();
+            <div id="page-header" class="clearfix">
+                <?php echo $html->heading; ?>
+                <div id="page-navbar" class="clearfix">
+                    <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
+                    <div class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></div>
+                </div>
+                <div id="course-header">
+                    <?php echo $OUTPUT->course_header(); ?>
+                </div>
+            </div>
+            <?php {
+                echo $OUTPUT->course_content_header();
+                echo $OUTPUT->main_content();
+                echo $OUTPUT->course_content_footer();
             } ?>
         </div>
         </div>
-
-        <?php echo $OUTPUT->blocks('side-pre', $sidepre); ?>
     </div>
 
     <footer id="page-footer">
@@ -92,8 +88,6 @@ echo $OUTPUT->doctype() ?>
         <p class="helplink"><?php echo $OUTPUT->page_doc_link(); ?></p>
         <?php
         echo $html->footnote;
-        echo $OUTPUT->login_info();
-        echo $OUTPUT->home_link();
         echo $OUTPUT->standard_footer_html();
         ?>
     </footer>

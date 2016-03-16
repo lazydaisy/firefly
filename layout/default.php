@@ -18,12 +18,12 @@
  * The two column layout.
  *
  * @package   theme_firefly
- * @copyright 2013 Moodle, moodle.org
+ * @copyright 2016 byLazyDaisy.uk
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 // Inherit HTML for Firefly settings from parent theme.
-$html = theme_clean_get_html_for_settings($OUTPUT, $PAGE);
+$html = theme_firefly_get_html_for_settings($OUTPUT, $PAGE);
 
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
@@ -64,20 +64,13 @@ echo $OUTPUT->doctype() ?>
     <div id="page-content" class="row-fluid">
         <div id="region-main" class="span12">
         <div class="container-fluid">
-            <div id="page-header" class="clearfix">
-                <?php echo $html->heading; ?>
-                <div id="page-navbar" class="clearfix">
-                    <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
-                    <div class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></div>
-                </div>
-                <div id="course-header">
-                    <?php echo $OUTPUT->course_header(); ?>
-                </div>
-            </div>
-            <?php {
-                echo $OUTPUT->course_content_header();
-                echo $OUTPUT->main_content();
-                echo $OUTPUT->course_content_footer();
+        <?php {
+            echo $OUTPUT->full_header();
+            echo $OUTPUT->course_content_header();
+            echo '<div class="region-content">';
+            echo $OUTPUT->main_content();
+            echo '</div>';
+            echo $OUTPUT->course_content_footer();
             } ?>
         </div>
         </div>

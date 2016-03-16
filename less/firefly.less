@@ -13,7 +13,7 @@
 
 @hrBorder: darken(@wellBackground, 5%);
 
-@bodyColor: @fade;
+@bodyColor: darken(@fade, 5%);
 
 @fireflyThemeColor: @rose;
 @fireflyThemeColorHover: lighten(@fireflyThemeColor, 25%);
@@ -32,6 +32,18 @@ body.dir-rtl {
         background-image:  url([[pix:theme|rtl-flower-bg]]);
         background-position: right 40px;
 }
+
+.usermenu .moodle-actionmenu.show[data-enhanced] .menu li:first-child {
+    background-color: @navbarLinkColorHover;
+    color: #ffffff;
+}
+.navbar-inverse .usermenu .moodle-actionmenu[data-enhanced] .menu .menu-action.icon img,
+.navbar-inverse .usermenu .moodle-actionmenu[data-enhanced] .menu .menu-action.icon:hover img {
+    background-color: @white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px #ddd;
+}
+
 // Remove unwanted text shadow, this can look odd with random colours.
 .breadcrumb li,
 .nav-header {
@@ -45,12 +57,34 @@ body.dir-rtl {
     background-image: url([[pix:theme|flower-fade]]);
     padding: 8px 0;
 }
+.block .header:hover {
+    background-image: url([[pix:theme|flower-wash]]);
+    padding: 8px 0;
+}
 .block {
     background-image: url([[pix:theme|flower-wash]]);
     border: 0 none;
     margin: 0 0 10px 10px;
     padding: 0;
 }
+#region-main .block .header {
+    background-image: url([[pix:theme|flower-fade]]);
+        background-color: @fade;
+    padding: 8px 0;
+}
+#region-main .block .header:hover {
+    background-image: url([[pix:theme|flower-wash]]);
+    background-color: @wash;
+    padding: 8px 0;
+}
+#region-main .block {
+    background-image: url([[pix:theme|flower-wash]]);
+    background-color: @wash;
+    border: 0 none;
+    margin: 0 0 10px 10px;
+    padding: 0;
+}
+
 #region-main.span9,
 #region-main.span12 {
     background-color: @fireflyThemeColor;
@@ -60,6 +94,7 @@ body.dir-rtl {
 }
 #region-main.span9,
 #region-main.span12,
+#region-main .block,
 .block {
     background-position: 0 40px;
     background-repeat: no-repeat;
@@ -113,8 +148,6 @@ body.dir-rtl {
 img.iconsmall,
 .block.block_with_controls div.header div.commands a img,
 .block-control-actions span.moodle-core-dragdrop-draghandle img,
-.course-content ul.topics li.section .right img,
-.course-content ul.topics li.section .left img,
 .editing .block a.menu-action i.fa {
     height: 15px;
     margin: 2px;
@@ -293,9 +326,7 @@ table.flexible tbody tr:hover > td {
     .frontpage-category-names,
     .sitetopic ul.section,
     .course_category_tree {
-        background-color: #eee;
-        color: #484848;
-        border-radius: 3px;
+        .well;
     }
 }
 
@@ -305,8 +336,7 @@ table.flexible tbody tr:hover > td {
     width: auto;
 }
 #notice.generalbox {
-    padding: 20px 20px 0;
-    border-radius: 3px;
+    .well;
 }
 
 .pagelayout-maintenance {
@@ -316,9 +346,7 @@ table.flexible tbody tr:hover > td {
     }
     #plugins-check {
         &.generaltable {
-            background-color: #eee;
-            color: #484848;
-            border-radius: 3px;
+            .well;
         }
     }
 }
@@ -479,4 +507,20 @@ table#user-grades th a {
 .dir-rtl .fa {
     margin-left: 0.3em;
     margin-right: 0;
+}
+#region-main .sitetopic {
+    background-color: @wash;
+    color: @fade;
+    border-radius: 4px;
+}
+#region-main .sitetopic h2 {
+    color: @rose;
+    padding: 10px;
+}
+
+@media (min-width: 980px) {
+    .pagelayout-course .course-content ul li.section {
+        padding-top: 60px;
+        margin-top: -60px;
+    }
 }

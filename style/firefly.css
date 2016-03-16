@@ -108,10 +108,8 @@ body.dir-rtl {
 }
 
 img.iconsmall,
-.block.block_with_controls div.header div.commands a img,
+.block.block_with_controls .header .commands a img,
 .block-control-actions span.moodle-core-dragdrop-draghandle img,
-.course-content ul.topics li.section .right img,
-.course-content ul.topics li.section .left img,
 .editing .block a.menu-action i.fa {
   width: 15px;
   height: 15px;
